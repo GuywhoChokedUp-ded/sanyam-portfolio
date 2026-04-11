@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Sanyam Kalra portfolio preview">
+  <defs>
+    <radialGradient id="g1" cx="15%" cy="15%" r="55%">
+      <stop offset="0%" stop-color="#3f6fb8" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#3f6fb8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="g2" cx="82%" cy="20%" r="52%">
+      <stop offset="0%" stop-color="#335286" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#335286" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="bg" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#121722"/>
+      <stop offset="100%" stop-color="#10141d"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#g1)"/>
+  <rect width="1200" height="630" fill="url(#g2)"/>
+  <text x="70" y="110" fill="#d7deea" font-family="Inter, Arial, sans-serif" font-size="28" letter-spacing="3" text-transform="uppercase">Finance Portfolio</text>
+  <text x="70" y="340" fill="#eef2f8" font-family="Georgia, Times New Roman, serif" font-size="90" font-weight="700">Sanyam Kalra</text>
+  <text x="70" y="410" fill="#cad5e7" font-family="Inter, Arial, sans-serif" font-size="36">BBA Student | CFA Level I Cleared</text>
+  <text x="70" y="555" fill="#b8c3d7" font-family="Inter, Arial, sans-serif" font-size="26">Investment Banking  |  Valuation  |  Financial Modelling</text>
+</svg>
