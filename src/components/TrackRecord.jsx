@@ -24,7 +24,7 @@ const items = [
   {
     title: "McKinsey Forward Program",
     date: "June 26",
-    detail: "Completed comprehensive program focused on business problem-solving, strategic thinking, and management consulting frameworks. Applied case study analysis and data-driven decision making."
+    detail: "Completed comprehensive online program focusing on problem-solving fundamentals, data-driven decision making, and business case analysis with real-world applications."
   },
   {
     title: "BCG Strategy Consulting Job Simulation",

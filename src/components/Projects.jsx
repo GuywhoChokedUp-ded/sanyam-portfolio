@@ -36,13 +36,13 @@ export default function Projects() {
       <div className="mt-10 grid gap-5 md:grid-cols-3">
         {projects.map((project, index) => (
           <RevealSection key={project.title} as="div" delay={index * 0.08}>
-            <a href={project.link} target="_blank" rel="noopener noreferrer" className="block">
+            <a href={project.link} target="_blank" rel="noopener noreferrer" className="block group">
               <motion.div
                 whileHover={{ scale: 1.018, y: -6, rotate: -0.2 }}
                 transition={{ duration: 0.25 }}
-                className="premium-card rounded-2xl p-7 transition-all duration-300"
+                className="premium-card rounded-2xl p-7 transition-all duration-300 cursor-pointer border border-transparent group-hover:border-accent/40 group-hover:shadow-lg group-hover:shadow-accent/10 dark:group-hover:shadow-accent/20"
               >
-                <h3 className="font-display text-3xl leading-tight text-text-light dark:text-zinc-100">{project.title}</h3>
+                <h3 className="font-display text-3xl leading-tight text-text-light dark:text-zinc-100 group-hover:text-accent transition-colors duration-300">{project.title}</h3>
                 <p className="mt-4 text-base leading-relaxed text-slate-700 dark:text-zinc-300">{project.description}</p>
               </motion.div>
             </a>

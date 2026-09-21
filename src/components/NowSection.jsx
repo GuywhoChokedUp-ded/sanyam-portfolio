@@ -1,9 +1,9 @@
 import RevealSection from "@/components/RevealSection";
 
 const nowItems = [
-  "Preparing CFA Level 2",
-  "Completing valuation course",
-  "Upskilling myself"
+  "Preparing for CFA Level 2 Exam",
+  "Completing Advanced Valuation and Modelling Course",
+  "Upskilling Myself by Participating in Various Simulations, Certifications"
 ];
 
 export default function NowSection() {

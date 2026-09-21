@@ -20,6 +20,16 @@ export default function Hero() {
       </div>
 
       <div className="space-y-6">
+        <motion.p
+          custom={0.1}
+          initial="hidden"
+          animate="show"
+          variants={introVariants}
+          className="text-xs uppercase tracking-[0.2em] text-slate-600 dark:text-zinc-400"
+        >
+          Investment Banking Enthusiast | CFA Level I Cleared
+        </motion.p>
+
         <motion.h1
           custom={0.2}
           initial="hidden"
