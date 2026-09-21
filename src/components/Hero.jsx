@@ -20,16 +20,6 @@ export default function Hero() {
       </div>
 
       <div className="space-y-6">
-        <motion.p
-          custom={0.1}
-          initial="hidden"
-          animate="show"
-          variants={introVariants}
-          className="text-xs uppercase tracking-[0.2em] text-slate-600 dark:text-zinc-400"
-        >
-          Investment Banking Enthusiast | CFA Level I Cleared
-        </motion.p>
-
         <motion.h1
           custom={0.2}
           initial="hidden"
@@ -37,7 +27,7 @@ export default function Hero() {
           variants={introVariants}
           className="font-display max-w-xl text-[2.2rem] leading-[1.06] text-text-light dark:text-zinc-100 sm:text-5xl md:text-6xl"
         >
-          Building valuation expertise through financial modelling and real-world analysis.
+          Finance student building real skills, not just theory.
         </motion.h1>
 
         <motion.p
@@ -57,17 +47,11 @@ export default function Hero() {
           variants={introVariants}
           className="flex flex-wrap gap-3"
         >
-          <a href="#work" className="btn-primary w-full justify-center sm:w-auto">
-            View Work
-          </a>
-          <a href="#journey" className="btn-secondary w-full justify-center border-slate-400/50 text-slate-800 hover:-translate-y-0.5 hover:border-slate-600 sm:w-auto dark:border-white/20 dark:text-zinc-100 dark:hover:border-white/40">
-            My Journey
-          </a>
           <a
-            href="https://drive.google.com/file/d/1TBzZd9_sFbQDMeJtVTW9dg9Fdc9f-KOY/view?usp=drive_link"
+            href="https://drive.google.com/file/d/1AGGhRrPx0PkH7kW7qexMP4k0aC7m5OSZ/view?usp=drivesdk"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-secondary w-full justify-center border-accent/60 text-slate-800 hover:-translate-y-0.5 hover:bg-accent/10 sm:w-auto dark:text-zinc-100 dark:hover:bg-accent/20"
+            className="btn-primary w-full justify-center sm:w-auto"
           >
             Resume
           </a>

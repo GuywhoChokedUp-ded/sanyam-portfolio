@@ -9,7 +9,7 @@ const navLinks = [
   { label: "Journey", href: "#journey" },
   {
     label: "Certificates",
-    href: "https://drive.google.com/drive/folders/11lLW8Nj09_9gWNyy22h2UGFMu09o2Hbk?usp=drive_link",
+    href: "https://drive.google.com/drive/folders/1YolCDGPCD6RPEnhQ_h1TnnuWrP7QuQVu",
     external: true
   },
   { label: "Contact", href: "#contact" }

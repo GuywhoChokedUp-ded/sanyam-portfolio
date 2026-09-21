@@ -11,7 +11,7 @@ export default function About() {
       <div className="section-divider" />
       <div className="mt-5 max-w-3xl space-y-4 text-base leading-relaxed text-slate-700 dark:text-zinc-300">
         <p>
-          I&apos;m a final-year BBA student with a strong interest in valuation and investment banking. I bring hands-on experience in financial modelling, DCF analysis, comparable company analysis, and precedent transactions.
+          I&apos;m a final-year BBA student with a strong interest in valuation and investment banking. I bring hands-on experience in financial modelling, DCF analysis, and comparable company analysis.
         </p>
         <p>
           My expertise includes financial analysis, valuation methodologies (DCF, multiples-based), WACC calculations, sensitivity analysis, and corporate finance fundamentals. I have completed the CFA Level I exam and am advancing my skills through applied financial modelling courses.

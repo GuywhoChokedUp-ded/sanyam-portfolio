@@ -19,9 +19,9 @@ export default function HomePage() {
           <main>
             <Hero />
             <About />
+            <Projects />
             <TrackRecord />
             <Skills />
-            <Projects />
             <NowSection />
           </main>
           <ScrollToTopButton />

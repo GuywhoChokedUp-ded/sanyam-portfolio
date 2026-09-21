@@ -22,6 +22,11 @@ const items = [
     detail: "Analyzed market, competitive, and customer data to evaluate strategic opportunities. Evaluated M&A targets through company analysis, financial forecasting, and valuation."
   },
   {
+    title: "McKinsey Forward Program",
+    date: "June 26",
+    detail: "Completed comprehensive program focused on business problem-solving, strategic thinking, and management consulting frameworks. Applied case study analysis and data-driven decision making."
+  },
+  {
     title: "BCG Strategy Consulting Job Simulation",
     date: "June 26",
     detail: "Applied structured problem-solving and stakeholder analysis to assess strategic trade-offs and develop actionable recommendations based on market analysis."

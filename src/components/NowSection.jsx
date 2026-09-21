@@ -1,9 +1,9 @@
 import RevealSection from "@/components/RevealSection";
 
 const nowItems = [
-  "Completing Advanced Financial Modelling and Valuation Course",
-  "Building financial models for real companies",
-  "Deepening expertise in DCF valuation and comparable company analysis"
+  "Preparing CFA Level 2",
+  "Completing valuation course",
+  "Upskilling myself"
 ];
 
 export default function NowSection() {

@@ -9,10 +9,10 @@ const groups = [
     items: [
       "DCF Valuation",
       "Comparable Company Analysis",
-      "Valuation Analysis",
+      "Relative Valuation",
       "WACC Calculation",
       "Sensitivity Analysis",
-      "Precedent Transactions"
+      "Valuation Analysis"
     ]
   },
   {
