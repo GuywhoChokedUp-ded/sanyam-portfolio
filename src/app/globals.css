@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  background: #121722;
+  color: #e7e5e1;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  background:
+    radial-gradient(circle at 12% 14%, rgba(49, 87, 154, 0.28), transparent 44%),
+    radial-gradient(circle at 78% 18%, rgba(68, 90, 142, 0.2), transparent 46%),
+    radial-gradient(circle at 66% 76%, rgba(72, 124, 201, 0.12), transparent 44%),
+    linear-gradient(180deg, #121722 0%, #10141d 58%, #0f141c 100%);
+}
+
+html.light body {
+  background: #f4f2ee;
+  color: #1f252d;
+}
+
+html.light body::before {
+  background:
+    radial-gradient(circle at 10% 12%, rgba(83, 111, 160, 0.2), transparent 44%),
+    radial-gradient(circle at 82% 20%, rgba(67, 111, 166, 0.15), transparent 46%),
+    linear-gradient(180deg, rgba(244, 242, 238, 1) 0%, rgba(238, 234, 226, 1) 100%);
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display), serif;
+    letter-spacing: -0.012em;
+  }
+
+  .font-body {
+    font-family: var(--font-body), sans-serif;
+  }
+
+  .section-label {
+    @apply text-[11px] uppercase tracking-[0.22em] text-slate-600 dark:text-zinc-500;
+  }
+
+  .section-title {
+    @apply font-display mt-3 text-4xl leading-[1.08] text-text-light dark:text-zinc-100 md:text-[2.6rem];
+  }
+
+  .section-divider {
+    @apply mt-4 h-px w-16 bg-slate-400/60 dark:bg-white/15;
+  }
+
+  .premium-card {
+    @apply border border-slate-400/30 bg-white/45 backdrop-blur-xl dark:border-white/10 dark:bg-white/[0.04];
+    box-shadow: 0 14px 36px rgba(15, 20, 30, 0.11), 0 3px 10px rgba(15, 20, 30, 0.07), inset 0 1px 0 rgba(255, 255, 255, 0.22);
+  }
+
+  .premium-card:hover {
+    box-shadow: 0 20px 48px rgba(25, 56, 104, 0.18), 0 6px 22px rgba(19, 33, 58, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.34);
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center rounded-sm px-5 py-3 text-sm font-medium text-white transition duration-300;
+    background-image: linear-gradient(135deg, #244777 0%, #345f9b 100%);
+    box-shadow: 0 10px 22px rgba(27, 67, 128, 0.28), 0 0 0 1px rgba(255, 255, 255, 0.08) inset;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px) scale(1.015);
+    filter: brightness(1.06);
+    box-shadow: 0 16px 34px rgba(30, 76, 146, 0.34), 0 0 22px rgba(64, 116, 198, 0.24);
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center rounded-sm border px-5 py-3 text-sm font-medium transition duration-300;
+  }
+}
+
+::selection {
+  background: rgba(53, 93, 150, 0.52);
+  color: #f8fafc;
+}
