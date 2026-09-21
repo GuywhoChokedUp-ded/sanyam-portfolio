@@ -67,21 +67,6 @@ export default function Hero() {
           </a>
         </motion.div>
       </div>
-
-      <motion.div
-        initial={{ opacity: 0, y: 18 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.45 }}
-        className="premium-card rounded-2xl p-7"
-      >
-        <p className="font-display text-sm uppercase tracking-[0.17em] text-slate-500 dark:text-zinc-500">Current Focus</p>
-        <ul className="mt-5 space-y-4 text-base leading-relaxed text-slate-700 dark:text-zinc-200">
-          <li>Valuation frameworks and practical modeling discipline</li>
-          <li>Building analyst-grade communication through finance content</li>
-          <li>Doing McKinsey Forward Program</li>
-          <li>Sharpening structured thinking for high-pressure deal work</li>
-        </ul>
-      </motion.div>
     </section>
   );
 }
