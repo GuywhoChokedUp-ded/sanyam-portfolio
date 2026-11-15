@@ -12,7 +12,7 @@ const navLinks = [
     href: "https://drive.google.com/drive/folders/1YolCDGPCD6RPEnhQ_h1TnnuWrP7QuQVu",
     external: true
   },
-  { label: "Contact", href: "#contact" }
+  { label: "Contact", href: "#contact-actions" }
 ];
 
 export default function Navbar() {

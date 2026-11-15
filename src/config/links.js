@@ -1,7 +1,7 @@
 // Update these URLs when a document or profile link changes.
 export const links = {
   resume: "https://drive.google.com/file/d/1eV0LjTm1pk4hubVe7XjT-WgjDzz3wVaM/view?usp=sharing",
-  email: "mailto:work.sanyamm@gmail.com",
+  email: "https://mail.google.com/mail/?view=cm&fs=1&to=work.sanyamm@gmail.com",
   linkedin: "https://linkedin.com/in/kalrasanyam",
   projects: {
     bajajAuto:

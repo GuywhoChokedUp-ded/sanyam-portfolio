@@ -53,12 +53,12 @@ export default function Hero() {
         </motion.p>
 
         <motion.div
-          id="contact"
+          id="contact-actions"
           custom={0.5}
           initial="hidden"
           animate="show"
           variants={introVariants}
-          className="flex flex-wrap gap-3"
+          className="scroll-mt-24 flex flex-wrap gap-3"
         >
           <a
             href={links.resume}
