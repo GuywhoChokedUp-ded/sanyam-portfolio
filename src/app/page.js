@@ -1,6 +1,7 @@
 import About from "@/components/About";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
+import MouseGlow from "@/components/MouseGlow";
 import Navbar from "@/components/Navbar";
 import NowSection from "@/components/NowSection";
 import Projects from "@/components/Projects";
@@ -15,6 +16,7 @@ export default function HomePage() {
     <ThemeProvider>
       <SmoothScrollProvider>
         <div className="min-h-screen bg-surface-light text-text-light transition-colors duration-500 dark:bg-surface-dark dark:text-text-dark">
+          <MouseGlow />
           <Navbar />
           <main>
             <Hero />

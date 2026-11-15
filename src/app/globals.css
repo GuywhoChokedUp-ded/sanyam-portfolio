@@ -4,6 +4,8 @@
 
 :root {
   color-scheme: dark;
+  --pointer-x: 50vw;
+  --pointer-y: 50vh;
 }
 
 html,
@@ -39,6 +41,27 @@ html.light body::before {
     radial-gradient(circle at 10% 12%, rgba(83, 111, 160, 0.2), transparent 44%),
     radial-gradient(circle at 82% 20%, rgba(67, 111, 166, 0.15), transparent 46%),
     linear-gradient(180deg, rgba(244, 242, 238, 1) 0%, rgba(238, 234, 226, 1) 100%);
+}
+
+.pointer-glow {
+  position: fixed;
+  z-index: 0;
+  top: var(--pointer-y);
+  left: var(--pointer-x);
+  width: 18rem;
+  height: 18rem;
+  pointer-events: none;
+  border-radius: 9999px;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.1);
+  filter: blur(38px);
+  opacity: 0.55;
+  transition: background 500ms ease, opacity 500ms ease;
+}
+
+html.light .pointer-glow {
+  background: rgba(93, 151, 235, 0.16);
+  opacity: 0.7;
 }
 
 @layer utilities {

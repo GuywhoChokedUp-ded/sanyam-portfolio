@@ -2,25 +2,26 @@
 
 import { motion } from "framer-motion";
 import RevealSection from "@/components/RevealSection";
+import { links } from "@/config/links";
 
 const projects = [
   {
     title: "Bajaj Auto Ltd. – Financial Modelling and Valuation",
     description:
       "Built an integrated financial model covering historical financials, operating forecasts, FCFF, WACC, and DCF valuation. Applied comparable company analysis using EV/EBITDA, EV/Revenue, and P/E multiples. Tested valuation sensitivity across WACC, terminal growth, and operating assumptions.",
-    link: "https://docs.google.com/presentation/d/1zHOfAZGkuLQJcrdfcIt28CBt7BW4P1ef/edit?usp=drivesdk&ouid=113375287022088696930&rtpof=true&sd=true"
+    link: links.projects.bajajAuto
   },
   {
     title: "S&P500 Index Valuation – DCF Analysis",
     description:
       "Developed a DCF valuation model for the S&P 500 index incorporating EPS growth, dividends, buybacks, and market conditions. Estimated intrinsic index value and analyzed sensitivity to key assumptions. Synthesized findings into a structured investment report.",
-    link: "https://docs.google.com/presentation/d/1dA23J8X1OAI_cqjMjF-Xz4_nBOAsdQO9/edit?usp=drivesdk&ouid=113375287022088696930&rtpof=true&sd=true"
+    link: links.projects.sp500
   },
   {
     title: "India Sector Wise WACC Study",
     description:
       "Conducted WACC analysis across 28 Indian sectors covering 280 listed companies using multiple beta methodologies. Estimated cost of equity, cost of debt, and capital structure using CAPM and synthetic ratings. Ranked sectors by cost of capital and analyzed WACC sensitivities.",
-    link: "#"
+    link: links.projects.waccStudy
   }
 ];
 

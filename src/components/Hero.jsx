@@ -1,6 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Linkedin, Mail } from "lucide-react";
+import { links } from "@/config/links";
 
 const introVariants = {
   hidden: { opacity: 0, y: 26 },
@@ -51,6 +53,7 @@ export default function Hero() {
         </motion.p>
 
         <motion.div
+          id="contact"
           custom={0.5}
           initial="hidden"
           animate="show"
@@ -58,12 +61,28 @@ export default function Hero() {
           className="flex flex-wrap gap-3"
         >
           <a
-            href="https://drive.google.com/file/d/1AGGhRrPx0PkH7kW7qexMP4k0aC7m5OSZ/view?usp=drivesdk"
+            href={links.resume}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-primary w-full justify-center sm:w-auto"
           >
             Resume
+          </a>
+          <a
+            href={links.email}
+            className="btn-secondary border-slate-400/50 text-text-light hover:border-accent hover:text-accent dark:border-white/15 dark:text-zinc-200 dark:hover:border-accent dark:hover:text-accent"
+          >
+            <Mail size={16} className="mr-2" />
+            Email
+          </a>
+          <a
+            href={links.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-secondary border-slate-400/50 text-text-light hover:border-accent hover:text-accent dark:border-white/15 dark:text-zinc-200 dark:hover:border-accent dark:hover:text-accent"
+          >
+            <Linkedin size={16} className="mr-2" />
+            LinkedIn
           </a>
         </motion.div>
       </div>

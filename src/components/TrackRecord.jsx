@@ -3,12 +3,12 @@ import RevealSection from "@/components/RevealSection";
 const items = [
   {
     title: "Advance Financial Modelling and Valuation – The Valuation School",
-    date: "2026 (Ongoing)",
+    date: "November 26",
     detail: "Advanced training in financial statement analysis, forecasting, DCF valuation, comparable company analysis, and WACC. Building practical proficiency in sensitivity analysis, capital structure, cost of equity, and cost of debt."
   },
   {
     title: "CFA Level I Passed",
-    date: "March 26, Karnal",
+    date: "March 26",
     detail: "Cleared CFA Level I with focus on applying financial analysis and valuation techniques to real-world companies and transactions."
   },
   {
