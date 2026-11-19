@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import RevealSection from "@/components/RevealSection";
 
@@ -39,6 +40,34 @@ const groups = [
   }
 ];
 
+function SkillCard({ skill }) {
+  const [flipped, setFlipped] = useState(false);
+
+  return (
+    <li
+      className={`skill-flip-card${flipped ? " is-flipped" : ""}`}
+      tabIndex="0"
+      role="button"
+      aria-expanded={flipped}
+      onClick={() => setFlipped((value) => !value)}
+      onKeyDown={(event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          setFlipped((value) => !value);
+        }
+      }}
+    >
+      <span className="skill-flip-inner">
+        <span className="skill-flip-face skill-flip-front">{skill.name}</span>
+        <span className="skill-flip-face skill-flip-back">
+          <span className="text-[0.65rem] uppercase tracking-[0.12em] text-accent dark:text-blue-300">Applied in</span>
+          <span>{skill.source}</span>
+        </span>
+      </span>
+    </li>
+  );
+}
+
 export default function Skills() {
   return (
     <section className="mx-auto w-full max-w-6xl px-6 py-16 md:px-10">
@@ -59,15 +88,7 @@ export default function Skills() {
               <h3 className="text-sm uppercase tracking-[0.15em] text-slate-600 dark:text-zinc-400">{group.title}</h3>
               <ul className="mt-4 space-y-3 text-base text-slate-700 dark:text-zinc-200">
                 {group.items.map((skill) => (
-                  <li key={skill.name} className="skill-flip-card" tabIndex="0">
-                    <span className="skill-flip-inner">
-                      <span className="skill-flip-face skill-flip-front">{skill.name}</span>
-                      <span className="skill-flip-face skill-flip-back">
-                        <span className="text-[0.65rem] uppercase tracking-[0.12em] text-accent dark:text-blue-300">Applied in</span>
-                        <span>{skill.source}</span>
-                      </span>
-                    </span>
-                  </li>
+                  <SkillCard key={skill.name} skill={skill} />
                 ))}
               </ul>
             </motion.div>
