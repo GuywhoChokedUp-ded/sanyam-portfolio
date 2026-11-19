@@ -7,34 +7,34 @@ const groups = [
   {
     title: "Valuation & Analysis",
     items: [
-      "DCF Valuation",
-      "Comparable Company Analysis",
-      "Valuation Analysis",
-      "WACC Calculation",
-      "Sensitivity Analysis",
-      "Relative Valuation"
+      { name: "DCF Valuation", source: "Bajaj Auto and S&P 500 valuation reports" },
+      { name: "Comparable Company Analysis", source: "Bajaj Auto valuation report" },
+      { name: "Valuation Analysis", source: "Bajaj Auto and S&P 500 valuation reports" },
+      { name: "WACC Calculation", source: "India Sector Wise WACC Study" },
+      { name: "Sensitivity Analysis", source: "Bajaj Auto and S&P 500 valuation reports" },
+      { name: "Relative Valuation", source: "Bajaj Auto valuation report" }
     ]
   },
   {
     title: "Financial Expertise",
     items: [
-      "Financial Modelling",
-      "Financial Statement Analysis",
-      "Financial Forecasting",
-      "Ratio Analysis",
-      "Corporate Finance",
-      "Industry Research"
+      { name: "Financial Modelling", source: "Bajaj Auto integrated financial model" },
+      { name: "Financial Statement Analysis", source: "Advanced Financial Modelling and Valuation course" },
+      { name: "Financial Forecasting", source: "Bajaj Auto integrated financial model" },
+      { name: "Ratio Analysis", source: "CFA Level I preparation and valuation work" },
+      { name: "Corporate Finance", source: "CFA Level I and valuation training" },
+      { name: "Industry Research", source: "India Sector Wise WACC Study" }
     ]
   },
   {
     title: "Tools & Proficiency",
     items: [
-      "Microsoft Excel (Advanced)",
-      "Financial Modelling in Excel",
-      "PowerPoint",
-      "Business Analytics",
-      "Market Research",
-      "Data Analysis"
+      { name: "Microsoft Excel (Advanced)", source: "Bajaj Auto and WACC study models" },
+      { name: "Financial Modelling in Excel", source: "Bajaj Auto integrated financial model" },
+      { name: "PowerPoint", source: "Bajaj Auto and S&P 500 reports" },
+      { name: "Business Analytics", source: "JPMorgan and Citi investment banking simulations" },
+      { name: "Market Research", source: "Citi investment banking simulation" },
+      { name: "Data Analysis", source: "India Sector Wise WACC Study" }
     ]
   }
 ];
@@ -59,8 +59,14 @@ export default function Skills() {
               <h3 className="text-sm uppercase tracking-[0.15em] text-slate-600 dark:text-zinc-400">{group.title}</h3>
               <ul className="mt-4 space-y-3 text-base text-slate-700 dark:text-zinc-200">
                 {group.items.map((skill) => (
-                  <li key={skill} className="rounded-md border border-slate-400/30 bg-white/55 px-3 py-2 transition-colors duration-300 hover:border-accent/45 dark:border-white/8 dark:bg-white/[0.02] dark:hover:border-white/20">
-                    {skill}
+                  <li key={skill.name} className="skill-flip-card" tabIndex="0">
+                    <span className="skill-flip-inner">
+                      <span className="skill-flip-face skill-flip-front">{skill.name}</span>
+                      <span className="skill-flip-face skill-flip-back">
+                        <span className="text-[0.65rem] uppercase tracking-[0.12em] text-accent dark:text-blue-300">Applied in</span>
+                        <span>{skill.source}</span>
+                      </span>
+                    </span>
                   </li>
                 ))}
               </ul>

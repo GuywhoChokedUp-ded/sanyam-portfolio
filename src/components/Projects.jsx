@@ -43,8 +43,11 @@ export default function Projects() {
                 transition={{ duration: 0.25 }}
                 className="premium-card rounded-2xl p-7 transition-all duration-300 cursor-pointer border border-transparent group-hover:border-accent/40 group-hover:shadow-lg group-hover:shadow-accent/10 dark:group-hover:shadow-accent/20"
               >
-                <h3 className="font-display text-3xl leading-tight text-text-light dark:text-zinc-100 group-hover:text-accent transition-colors duration-300">{project.title}</h3>
+                <h3 className="font-display text-3xl leading-tight text-text-light dark:text-zinc-100 dark:group-hover:text-blue-300 transition-colors duration-300">{project.title}</h3>
                 <p className="mt-4 text-base leading-relaxed text-slate-700 dark:text-zinc-300">{project.description}</p>
+                <span className="mt-6 inline-block text-sm font-medium text-accent transition-colors group-hover:text-accent-soft dark:text-blue-300 dark:group-hover:text-blue-200">
+                  View report ↗
+                </span>
               </motion.div>
             </a>
           </RevealSection>

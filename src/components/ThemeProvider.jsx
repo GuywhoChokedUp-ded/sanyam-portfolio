@@ -9,7 +9,12 @@ export function ThemeProvider({ children }) {
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
-    const nextTheme = savedTheme === "light" ? "light" : "dark";
+    const nextTheme =
+      savedTheme === "light" || savedTheme === "dark"
+        ? savedTheme
+        : window.matchMedia("(prefers-color-scheme: light)").matches
+          ? "light"
+          : "dark";
     setTheme(nextTheme);
   }, []);
 

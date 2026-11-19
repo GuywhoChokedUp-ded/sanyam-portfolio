@@ -70,7 +70,7 @@ export default function Hero() {
           </a>
           <a
             href={links.email}
-            className="btn-secondary border-slate-400/50 text-text-light hover:border-accent hover:text-accent dark:border-white/15 dark:text-zinc-200 dark:hover:border-accent dark:hover:text-accent"
+            className="btn-secondary border-slate-400/50 text-text-light hover:border-accent hover:text-accent active:scale-[0.97] dark:border-white/15 dark:text-zinc-200 dark:hover:border-blue-300 dark:hover:text-blue-300"
           >
             <Mail size={16} className="mr-2" />
             Email
@@ -79,7 +79,7 @@ export default function Hero() {
             href={links.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-secondary border-slate-400/50 text-text-light hover:border-accent hover:text-accent dark:border-white/15 dark:text-zinc-200 dark:hover:border-accent dark:hover:text-accent"
+            className="btn-secondary border-slate-400/50 text-text-light hover:border-accent hover:text-accent active:scale-[0.97] dark:border-white/15 dark:text-zinc-200 dark:hover:border-blue-300 dark:hover:text-blue-300"
           >
             <Linkedin size={16} className="mr-2" />
             LinkedIn

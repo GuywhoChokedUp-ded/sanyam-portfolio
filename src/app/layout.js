@@ -1,5 +1,8 @@
 import "./globals.css";
 import { Inter, Playfair_Display } from "next/font/google";
+import MotionProvider from "@/components/MotionProvider";
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://sanyam-portfolio-plum.vercel.app";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -12,7 +15,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"),
+  metadataBase: new URL(siteUrl),
   title: {
     default: "Sanyam Kalra | Finance Portfolio",
     template: "%s | Sanyam Kalra"
@@ -42,7 +45,7 @@ export const metadata = {
     url: "/",
     images: [
       {
-        url: "/og-image.svg",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "Sanyam Kalra finance portfolio preview"
@@ -54,7 +57,7 @@ export const metadata = {
     title: "Sanyam Kalra | Finance Portfolio",
     description:
       "BBA student and CFA Level I cleared candidate building practical investment banking and valuation skills.",
-    images: ["/twitter-image.svg"]
+    images: ["/twitter-image.png"]
   },
   icons: {
     icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
@@ -74,8 +77,10 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="dark">
-      <body className={`${inter.variable} ${playfair.variable} font-body antialiased transition-colors duration-500`}>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${inter.variable} ${playfair.variable} font-body antialiased transition-colors duration-500`}>
+        <MotionProvider>{children}</MotionProvider>
+      </body>
     </html>
   );
 }

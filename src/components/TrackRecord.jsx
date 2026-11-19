@@ -2,14 +2,9 @@ import RevealSection from "@/components/RevealSection";
 
 const items = [
   {
-    title: "Advance Financial Modelling and Valuation – The Valuation School",
-    date: "November 26",
+    title: "Advanced Financial Modelling and Valuation – The Valuation School",
+    date: "November 2026",
     detail: "Advanced training in financial statement analysis, forecasting, DCF valuation, comparable company analysis, and WACC. Building practical proficiency in sensitivity analysis, capital structure, cost of equity, and cost of debt."
-  },
-  {
-    title: "CFA Level I Passed",
-    date: "March 26",
-    detail: "Cleared CFA Level I with focus on applying financial analysis and valuation techniques to real-world companies and transactions."
   },
   {
     title: "JPMorgan Chase - Investment Banking Job Simulation",
@@ -32,6 +27,11 @@ const items = [
     detail: "Applied structured problem-solving and stakeholder analysis to assess strategic trade-offs and develop actionable recommendations based on market analysis."
   },
   {
+    title: "CFA Level I Passed",
+    date: "March 2026",
+    detail: "Cleared CFA Level I with focus on applying financial analysis and valuation techniques to real-world companies and transactions."
+  },
+  {
     title: "BBA at DAV College - Kurukshetra University",
     date: "2024-2027",
     detail: "Building comprehensive foundation in Financial Accounting, Business Statistics, Managerial Economics, Capital Markets, and Business Research Methods. SGPA: 7.29"
@@ -51,7 +51,7 @@ export default function TrackRecord() {
         {items.map((item, index) => (
           <RevealSection key={item.title} as="article" delay={index * 0.08} className="premium-card relative mb-7 rounded-xl p-5 last:mb-0 sm:p-6">
             <span className="absolute -left-8 top-6 h-4 w-4 rounded-full bg-accent ring-4 ring-surface-light dark:ring-surface-dark" />
-            <p className="text-xs uppercase tracking-[0.15em] text-slate-600 dark:text-zinc-500">{item.date}</p>
+            <p className="text-xs uppercase tracking-[0.15em] text-slate-600 dark:text-zinc-400">{item.date}</p>
             <h3 className="font-display mt-1 text-2xl leading-tight text-text-light dark:text-zinc-100">{item.title}</h3>
             <p className="mt-2 text-base leading-relaxed text-slate-700 dark:text-zinc-300">{item.detail}</p>
           </RevealSection>

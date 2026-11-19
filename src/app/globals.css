@@ -46,13 +46,17 @@ html.light body::before {
 .pointer-glow {
   position: fixed;
   z-index: 0;
-  top: var(--pointer-y);
-  left: var(--pointer-x);
+  top: 0;
+  left: 0;
   width: 18rem;
   height: 18rem;
   pointer-events: none;
   border-radius: 9999px;
-  transform: translate(-50%, -50%);
+  transform: translate3d(
+    calc(var(--pointer-x) - 9rem),
+    calc(var(--pointer-y) - 9rem),
+    0
+  );
   background: rgba(255, 255, 255, 0.1);
   filter: blur(38px);
   opacity: 0.55;
@@ -75,7 +79,7 @@ html.light .pointer-glow {
   }
 
   .section-label {
-    @apply text-[11px] uppercase tracking-[0.22em] text-slate-600 dark:text-zinc-500;
+    @apply text-[0.6875rem] uppercase tracking-[0.22em] text-slate-600 dark:text-zinc-400;
   }
 
   .section-title {
@@ -107,6 +111,49 @@ html.light .pointer-glow {
     box-shadow: 0 16px 34px rgba(30, 76, 146, 0.34), 0 0 22px rgba(64, 116, 198, 0.24);
   }
 
+  .btn-primary:active,
+  .btn-secondary:active {
+    transform: scale(0.97);
+    transition-duration: 100ms;
+  }
+
+  .skill-flip-card {
+    @apply relative min-h-[3.25rem] cursor-default rounded-md outline-none;
+    perspective: 900px;
+  }
+
+  .skill-flip-inner {
+    position: absolute;
+    inset: 0;
+    display: block;
+    min-height: 3.25rem;
+    transform-style: preserve-3d;
+    transition: transform 500ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .skill-flip-card:hover .skill-flip-inner,
+  .skill-flip-card:focus-visible .skill-flip-inner {
+    transform: rotateX(180deg);
+  }
+
+  .skill-flip-face {
+    @apply absolute inset-0 flex items-center rounded-md border border-slate-400/30 px-3 py-2 text-sm transition-colors duration-300 dark:border-white/10;
+    backface-visibility: hidden;
+  }
+
+  .skill-flip-front {
+    @apply bg-white/55 text-slate-700 dark:bg-white/[0.02] dark:text-zinc-200;
+  }
+
+  .skill-flip-back {
+    @apply flex-col items-start justify-center gap-1 bg-slate-100/90 text-xs leading-snug text-slate-700 dark:bg-[#1b2535] dark:text-zinc-200;
+    transform: rotateX(180deg);
+  }
+
+  .skill-flip-card:focus-visible .skill-flip-face {
+    @apply border-accent dark:border-blue-300;
+  }
+
   .btn-secondary {
     @apply inline-flex items-center rounded-sm border px-5 py-3 text-sm font-medium transition duration-300;
   }
@@ -115,4 +162,43 @@ html.light .pointer-glow {
 ::selection {
   background: rgba(53, 93, 150, 0.52);
   color: #f8fafc;
+}
+
+@media (hover: none), (pointer: coarse) {
+  .pointer-glow {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  .pointer-glow {
+    display: none;
+  }
+
+  .premium-card,
+  header,
+  .skill-flip-face {
+    backdrop-filter: none;
+  }
+
+  .premium-card,
+  header {
+    background: #f4f2ee;
+  }
+
+  html.dark .premium-card,
+  html.dark header {
+    background: #121722;
+  }
 }
